@@ -140,6 +140,9 @@ class tableMath:
                 #print(truth1[trial][ind1])
                 return False
         return (True)
+
+#Will need to add an "implies" function to the class, and will need to properly handle the implies
+#logic gates. I have a feeling it will break something.
     
 class getTabInfo:
     
@@ -165,8 +168,21 @@ class getTabInfo:
         return eq
     
     
+"""
+Will create a second class, whose purpose is simplification of
+propositional variables. Class will be private to the module.
+
+A dictionay will have a collection of all logical equivelences,
+including: modus tollens and other "logical implications", as well as
+the explicit simplification methods.
+
+Each step will involve assigning a propositional phrase to a variable,
+and searching the dictionary for that, upper-statement set, then retranslating
+the variables into the statement they represent. A "tuple" is the prefferred form.
 
 
+
+"""
 # equation = ["( not ( not ( builder.get('p') and builder.get('q') ) ) and ( builder.get('q') or builder.get('p') ) )", "builder.get('q') and (not builder.get('p'))"] #
 # #equationy = ["builder.get('u') and builder.get('e')","builder.get('u') or builder.get('j')"]
 # props = ["p", "q"]
